@@ -14,7 +14,7 @@ protocol ListPeopleInteractorInput {
 }
 
 protocol ListPeopleInteractorOutput {
-
+    func presentList(_ response: ListPeople.Response)
 }
 
 // MARK: Class
