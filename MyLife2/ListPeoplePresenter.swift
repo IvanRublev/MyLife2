@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: Boundary protocol
 protocol ListPeoplePresenterOutput: class {
-    func displaySomething(_ viewModel: ListPeople.Response.ViewModel)
+    
 }
 
 // MARK: Class
@@ -21,8 +21,5 @@ class ListPeoplePresenter: ListPeopleInteractorOutput {
     weak var output: ListPeoplePresenterOutput?
     
     // MARK: Presentation logic
-    func presentSomething(_ response: ListPeople.Response) {
-        let viewModel = ListPeople.Response.ViewModel()
-        output?.displaySomething(viewModel)
-    }
+
 }
