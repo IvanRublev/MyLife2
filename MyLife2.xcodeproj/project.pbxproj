@@ -10,10 +10,9 @@
 		43A538A77FD641187BBBC951 /* Pods_MyLife2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4B3037B4A87B0A58E0711B /* Pods_MyLife2Tests.framework */; };
 		9C07A802FD401954A8B2CC53 /* Pods_MyLife2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15929DD98AF632F5D479D99 /* Pods_MyLife2.framework */; };
 		AB7291FD1DF176BD0006BE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7291FC1DF176BD0006BE61 /* AppDelegate.swift */; };
-		AB7291FF1DF176BD0006BE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7291FE1DF176BD0006BE61 /* ViewController.swift */; };
-		AB7292021DF176BD0006BE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7292001DF176BD0006BE61 /* Main.storyboard */; };
 		AB7292041DF176BD0006BE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7292031DF176BD0006BE61 /* Assets.xcassets */; };
 		AB7292071DF176BD0006BE61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7292051DF176BD0006BE61 /* LaunchScreen.storyboard */; };
+		AB72921F1DF1826E0006BE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB72921E1DF1826E0006BE61 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +30,12 @@
 		471C452CC6826AD5AAFB67CA /* Pods-MyLife2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLife2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLife2/Pods-MyLife2.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7291F91DF176BD0006BE61 /* MyLife2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLife2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7291FC1DF176BD0006BE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB7291FE1DF176BD0006BE61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB7292011DF176BD0006BE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB7292031DF176BD0006BE61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7292061DF176BD0006BE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB7292081DF176BD0006BE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB72920D1DF176BD0006BE61 /* MyLife2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLife2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7292131DF176BD0006BE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB72921E1DF1826E0006BE61 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B15929DD98AF632F5D479D99 /* Pods_MyLife2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLife2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F47F889316068A032DF5AD /* Pods-MyLife2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLife2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLife2/Pods-MyLife2.release.xcconfig"; sourceTree = "<group>"; };
 		D67C1A196ECEFB8F9663A044 /* Pods-MyLife2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLife2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLife2Tests/Pods-MyLife2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,8 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				AB7291FC1DF176BD0006BE61 /* AppDelegate.swift */,
-				AB7291FE1DF176BD0006BE61 /* ViewController.swift */,
-				AB7292001DF176BD0006BE61 /* Main.storyboard */,
+				AB72921E1DF1826E0006BE61 /* Main.storyboard */,
 				AB7292031DF176BD0006BE61 /* Assets.xcassets */,
 				AB7292051DF176BD0006BE61 /* LaunchScreen.storyboard */,
 				AB7292081DF176BD0006BE61 /* Info.plist */,
@@ -214,9 +211,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB72921F1DF1826E0006BE61 /* Main.storyboard in Resources */,
 				AB7292071DF176BD0006BE61 /* LaunchScreen.storyboard in Resources */,
 				AB7292041DF176BD0006BE61 /* Assets.xcassets in Resources */,
-				AB7292021DF176BD0006BE61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7291FF1DF176BD0006BE61 /* ViewController.swift in Sources */,
 				AB7291FD1DF176BD0006BE61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,14 +346,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AB7292001DF176BD0006BE61 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB7292011DF176BD0006BE61 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AB7292051DF176BD0006BE61 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
