@@ -10,28 +10,60 @@ import UIKit
 
 // MARK: Boundary protocols
 protocol EditPersonInteractorInput {
-    func doSomething(_ request: EditPerson.Request)
+    func showPersonData(_ request: EditPerson.Request)
+    func validatePersonData(_ request: EditPerson.Request) -> Bool
+    func updatePersonData(_ request: EditPerson.Request)
 }
 
 protocol EditPersonInteractorOutput {
-    func presentSomething(_ response: EditPerson.Response)
+    func presentPersonData(_ response: EditPerson.Response)
+    func presentValidationError(_ response: EditPerson.Response)
 }
 
 // MARK: Class
 /**
-    Class to <#business#>.
+ Class to edit person's data.
  */
 class EditPersonInteractor: EditPersonInteractorInput {
     var output: EditPersonInteractorOutput!
+    var persons: PersonDatabase!
     
     // MARK: Business logic
-    func doSomething(_ request: EditPerson.Request) {
-        // NOTE: Create some Entity to do the work
-        //let entity = EditPersonWorker()
-        //entity.doSomeWork()
+    func showPersonData(_ request: EditPerson.Request) {
+        let aPerson = persons[request.identifier!]
         
-        // NOTE: Pass the result to the Presenter
-        let response = EditPerson.Response()
-        output.presentSomething(response)
+        let response = EditPerson.Response(name: aPerson.name,
+                                           nameIsValid: true,
+                                           image: aPerson.image,
+                                           dogPreference: aPerson.dogPreference)
+        output.presentPersonData(response)
     }
+    
+    func validatePersonData(_ request: EditPerson.Request) -> Bool {
+        let nameIsValid = (request.name.characters.count > 0)
+        
+        let response = EditPerson.Response(name: nil, nameIsValid: nameIsValid, image: nil, dogPreference: nil)
+        output.presentValidationError(response)
+        
+        return nameIsValid
+    }
+    
+    func updatePersonData(_ request: EditPerson.Request) {
+        guard let identifier = request.identifier else {
+            let newPerson = Person(name: request.name, image: UIImage(named: "DefaultImage"), dogPreference: request.dogPreference)
+            persons.add(person: newPerson)
+            print("New Person is added!")
+            return
+        } // otherwise update existing preson
+        
+        var aPerson = persons[identifier]
+        
+        aPerson.name = request.name
+        aPerson.dogPreference = request.dogPreference
+        
+        persons[identifier] = aPerson
+        print("Person is updated!")
+    }
+    
+    // MARK: Response maker
 }

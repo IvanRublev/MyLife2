@@ -23,6 +23,7 @@ class EditPersonConfigurator {
         
         let interactor = EditPersonInteractor()
         interactor.output = presenter
+        interactor.persons = personDatabase
         
         viewController.output = interactor
         viewController.router = router

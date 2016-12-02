@@ -15,36 +15,30 @@ class EditPersonRouter {
     weak var viewController: EditPersonViewController?
     
     // MARK: Manual navigation
-    func navigateToSomewhere() {
-        // NOTE: Teach the router how to navigate to another scene. Some examples follow:
+    func navigateToListPeople() {
+        guard let viewController = viewController else {
+            preconditionFailure()
+        }
+        /*
+         Depending on style of presentation, this view controller needs to be
+         dismissed in two different ways. We used a modal presentation for
+         adding people, which needs to be dismissed. Editing an existing person
+         used a 'push', which requires a 'pop' to return to the previous page.
+         */
+        let isPresentingInAddMode = viewController.presentingViewController is UINavigationController
         
-        // 1. Trigger a storyboard segue
-        // viewController?.performSegue(withIdentifier: "ShowSomewhereScene", sender: nil)
-        
-        // 2. Present another view controller programmatically
-        // viewController?.present(someWhereViewController, animated: true, completion: nil)
-        
-        // 3. Ask the navigation controller to push another view controller onto the stack
-        // viewController?.navigationController?.pushViewController(someWhereViewController, animated: true)
-        
-        // 4. Present a view controller from a different storyboard
-        // let storyboard = UIStoryboard(name: "OtherThanMain", bundle: nil)
-        // let someWhereViewController = storyboard.instantiateInitialViewController() as! SomeWhereViewController
-        // viewController?.navigationController?.pushViewController(someWhereViewController, animated: true)
+        if isPresentingInAddMode {
+            viewController.dismiss(animated: true, completion: nil)
+        }
+        else {
+            viewController.navigationController!.popViewController(animated: true)
+        }
     }
     
     // MARK: Scene communication
     func passDataBetweenScenes(of segue: UIStoryboardSegue) {
-        // NOTE: Teach the router which scenes it can communicate with
-        if segue.identifier == "ShowSomewhereScene" {
-            sendDataToSomewhereScene(segue)
+        if segue.identifier == "unwind" {
         }
-    }
-    
-    func sendDataToSomewhereScene(_ segue: UIStoryboardSegue) {
-        // NOTE: Teach the router how to pass data to the next scene
-        // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
-        // someWhereviewController.objectId = viewController?.objectId
     }
 }
 

@@ -22,8 +22,8 @@ class ListPeopleViewController: UITableViewController, ListPeoplePresenterOutput
     }
     
     // MARK: View lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         showListOnLoad()
     }
     
@@ -54,7 +54,7 @@ class ListPeopleViewController: UITableViewController, ListPeoplePresenterOutput
     /// The table view calls this method to set up each cell in the table for display.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Ask the table view to create a cell for us to use to show a person.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PersonCell
 
         guard let itemsViewModel = itemsViewModel else {
             return cell
@@ -64,10 +64,13 @@ class ListPeopleViewController: UITableViewController, ListPeoplePresenterOutput
         let viewModel = itemsViewModel[indexPath.row]
         
         // Set the text and image in the cell.
+        cell.objectIdentifier = viewModel.identifier
         cell.textLabel!.text = viewModel.preparedName
         cell.imageView!.image = viewModel.preparedImage
         
         // Now the cell has been setup, return it to the table view.
         return cell
     }
+    
+    @IBAction func unwindToPersonList(_ sender: UIStoryboardSegue) { }
 }

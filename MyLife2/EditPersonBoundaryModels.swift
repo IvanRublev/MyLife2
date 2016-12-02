@@ -13,12 +13,34 @@ import UIKit
  */
 struct EditPerson {
     struct Request {
+        let identifier: Int?
+        // For update
+        var name: String!
+        var dogPreference: Float!
         
+        init(identifier: Int) {
+            self.identifier = identifier
+        }
+        
+        init(identifier: Int?, name: String, dogPreference: Float) {
+            self.identifier = identifier
+            self.name = name
+            self.dogPreference = dogPreference
+        }
     }
     struct Response {
+        let name: String?
+        let nameIsValid: Bool
+        
+        let image: UIImage?
+        let dogPreference: Float?
         
         struct ViewModel {
+            let name: String?
+            let nameAsteriskHidden: Bool
             
+            let image: UIImage?
+            let dogPreference: Float?
         }
     }
 }

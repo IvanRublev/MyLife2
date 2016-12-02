@@ -8,7 +8,15 @@
 
 import UIKit
 
-struct PersonDatabase {
+let personDatabase = PersonDatabase()
+
+class PersonDatabase {
+    init() {}
+    
+    init(persons: [Person]) {
+        self.persons = persons
+    }
+    
     private var persons: [Person] = [
         Person(name: "Byte",
                image: UIImage(named: "Sample1"),
@@ -34,7 +42,7 @@ struct PersonDatabase {
         }
     }
     
-    mutating func add(person: Person) {
+    func add(person: Person) {
         persons.append(person)
     }
 }

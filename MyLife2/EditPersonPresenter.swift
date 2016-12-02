@@ -10,7 +10,8 @@ import UIKit
 
 // MARK: Boundary protocol
 protocol EditPersonPresenterOutput: class {
-    func displaySomething(_ viewModel: EditPerson.Response.ViewModel)
+    func displayPerson(_ viewModel: EditPerson.Response.ViewModel)
+    func displayValidationError(_ viewModel: EditPerson.Response.ViewModel)
 }
 
 // MARK: Class
@@ -21,8 +22,20 @@ class EditPersonPresenter: EditPersonInteractorOutput {
     weak var output: EditPersonPresenterOutput?
     
     // MARK: Presentation logic
-    func presentSomething(_ response: EditPerson.Response) {
-        let viewModel = EditPerson.Response.ViewModel()
-        output?.displaySomething(viewModel)
+    func presentPersonData(_ response: EditPerson.Response) {
+        output?.displayPerson(viewModel(response))
+    }
+    
+    func presentValidationError(_ response: EditPerson.Response) {
+        output?.displayValidationError(viewModel(response))
+    }
+    
+    // MARK: Helper
+    func viewModel(_ response: EditPerson.Response) -> EditPerson.Response.ViewModel {
+        return EditPerson.Response
+            .ViewModel(name: response.name,
+                       nameAsteriskHidden: response.nameIsValid,
+                       image: response.image,
+                       dogPreference: response.dogPreference)
     }
 }

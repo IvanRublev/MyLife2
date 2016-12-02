@@ -23,6 +23,7 @@ class ListPeopleConfigurator {
         
         let interactor = ListPeopleInteractor()
         interactor.output = presenter
+        interactor.persons = personDatabase
         
         viewController.output = interactor
         viewController.router = router

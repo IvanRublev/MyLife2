@@ -27,6 +27,13 @@
 		AB72923D1DF185EB0006BE61 /* EditPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292371DF185EB0006BE61 /* EditPersonViewController.swift */; };
 		AB7292411DF187AE0006BE61 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292401DF187AE0006BE61 /* Person.swift */; };
 		AB7292431DF187F90006BE61 /* PersonDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292421DF187F90006BE61 /* PersonDatabase.swift */; };
+		AB7292451DF1A9920006BE61 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292441DF1A9920006BE61 /* PersonCell.swift */; };
+		AB7292611DF6C9C50006BE61 /* EditPersonViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72924F1DF2D5AD0006BE61 /* EditPersonViewControllerTests.swift */; };
+		AB7292621DF6CF800006BE61 /* EditPersonInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72924D1DF2D5AD0006BE61 /* EditPersonInteractorTests.swift */; };
+		AB7292631DF6CF800006BE61 /* EditPersonPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72924E1DF2D5AD0006BE61 /* EditPersonPresenterTests.swift */; };
+		AB7292641DF6CF830006BE61 /* ListPeopleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292461DF2D5890006BE61 /* ListPeopleInteractorTests.swift */; };
+		AB7292651DF6CF830006BE61 /* ListPeoplePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292471DF2D5890006BE61 /* ListPeoplePresenterTests.swift */; };
+		AB7292661DF6CF830006BE61 /* ListPeopleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292481DF2D5890006BE61 /* ListPeopleViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,13 @@
 		AB7292371DF185EB0006BE61 /* EditPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonViewController.swift; sourceTree = "<group>"; };
 		AB7292401DF187AE0006BE61 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AB7292421DF187F90006BE61 /* PersonDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDatabase.swift; sourceTree = "<group>"; };
+		AB7292441DF1A9920006BE61 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		AB7292461DF2D5890006BE61 /* ListPeopleInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPeopleInteractorTests.swift; sourceTree = "<group>"; };
+		AB7292471DF2D5890006BE61 /* ListPeoplePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPeoplePresenterTests.swift; sourceTree = "<group>"; };
+		AB7292481DF2D5890006BE61 /* ListPeopleViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPeopleViewControllerTests.swift; sourceTree = "<group>"; };
+		AB72924D1DF2D5AD0006BE61 /* EditPersonInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonInteractorTests.swift; sourceTree = "<group>"; };
+		AB72924E1DF2D5AD0006BE61 /* EditPersonPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonPresenterTests.swift; sourceTree = "<group>"; };
+		AB72924F1DF2D5AD0006BE61 /* EditPersonViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonViewControllerTests.swift; sourceTree = "<group>"; };
 		B15929DD98AF632F5D479D99 /* Pods_MyLife2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLife2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F47F889316068A032DF5AD /* Pods-MyLife2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLife2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLife2/Pods-MyLife2.release.xcconfig"; sourceTree = "<group>"; };
 		D67C1A196ECEFB8F9663A044 /* Pods-MyLife2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLife2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLife2Tests/Pods-MyLife2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				AB7292131DF176BD0006BE61 /* Info.plist */,
+				AB72924C1DF2D5990006BE61 /* List People */,
+				AB7292531DF2D5B10006BE61 /* Edit Person */,
 			);
 			path = MyLife2Tests;
 			sourceTree = "<group>";
@@ -173,8 +189,29 @@
 				AB7292291DF185B70006BE61 /* ListPeoplePresenter.swift */,
 				AB72922A1DF185B70006BE61 /* ListPeopleRouter.swift */,
 				AB72922B1DF185B70006BE61 /* ListPeopleViewController.swift */,
+				AB7292441DF1A9920006BE61 /* PersonCell.swift */,
 			);
 			name = "List People";
+			sourceTree = "<group>";
+		};
+		AB72924C1DF2D5990006BE61 /* List People */ = {
+			isa = PBXGroup;
+			children = (
+				AB7292461DF2D5890006BE61 /* ListPeopleInteractorTests.swift */,
+				AB7292471DF2D5890006BE61 /* ListPeoplePresenterTests.swift */,
+				AB7292481DF2D5890006BE61 /* ListPeopleViewControllerTests.swift */,
+			);
+			name = "List People";
+			sourceTree = "<group>";
+		};
+		AB7292531DF2D5B10006BE61 /* Edit Person */ = {
+			isa = PBXGroup;
+			children = (
+				AB72924D1DF2D5AD0006BE61 /* EditPersonInteractorTests.swift */,
+				AB72924E1DF2D5AD0006BE61 /* EditPersonPresenterTests.swift */,
+				AB72924F1DF2D5AD0006BE61 /* EditPersonViewControllerTests.swift */,
+			);
+			name = "Edit Person";
 			sourceTree = "<group>";
 		};
 		C7036D25C8826A167F71E17B /* Pods */ = {
@@ -392,6 +429,7 @@
 			files = (
 				AB7292411DF187AE0006BE61 /* Person.swift in Sources */,
 				AB72922C1DF185B70006BE61 /* ListPeopleBoundaryModels.swift in Sources */,
+				AB7292451DF1A9920006BE61 /* PersonCell.swift in Sources */,
 				AB72922E1DF185B70006BE61 /* ListPeopleInteractor.swift in Sources */,
 				AB7292431DF187F90006BE61 /* PersonDatabase.swift in Sources */,
 				AB72922F1DF185B70006BE61 /* ListPeoplePresenter.swift in Sources */,
@@ -412,6 +450,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7292611DF6C9C50006BE61 /* EditPersonViewControllerTests.swift in Sources */,
+				AB7292661DF6CF830006BE61 /* ListPeopleViewControllerTests.swift in Sources */,
+				AB7292641DF6CF830006BE61 /* ListPeopleInteractorTests.swift in Sources */,
+				AB7292631DF6CF800006BE61 /* EditPersonPresenterTests.swift in Sources */,
+				AB7292621DF6CF800006BE61 /* EditPersonInteractorTests.swift in Sources */,
+				AB7292651DF6CF830006BE61 /* ListPeoplePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
