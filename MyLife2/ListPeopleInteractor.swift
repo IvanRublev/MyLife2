@@ -19,10 +19,11 @@ protocol ListPeopleInteractorOutput {
 
 // MARK: Class
 /**
-    Class to <#business#>.
+    Class to list people.
  */
 class ListPeopleInteractor: ListPeopleInteractorInput {
     var output: ListPeopleInteractorOutput!
+    var persons: PersonDatabase!
     
     // MARK: Business logic
 
