@@ -24,19 +24,12 @@ class ListPeopleViewController: UITableViewController, ListPeoplePresenterOutput
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomethingOnLoad()
+
     }
     
     // MARK: Event handling
-    func doSomethingOnLoad() {
-        // NOTE: Ask the Interactor to do some work
-        let request = ListPeople.Request()
-        output.doSomething(request)
-    }
+
     
     // MARK: Display logic
-    func displaySomething(_ viewModel: ListPeople.Response.ViewModel) {
-        // NOTE: Display the result from the Presenter
-        // nameTextField.text = viewModel.name
-    }
+
 }
