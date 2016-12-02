@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: Boundary protocols
 protocol ListPeopleInteractorInput {
-    
+    func showPeopleList(_ request: ListPeople.Request)
 }
 
 protocol ListPeopleInteractorOutput {
