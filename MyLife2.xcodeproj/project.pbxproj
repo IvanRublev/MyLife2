@@ -34,6 +34,8 @@
 		AB7292641DF6CF830006BE61 /* ListPeopleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292461DF2D5890006BE61 /* ListPeopleInteractorTests.swift */; };
 		AB7292651DF6CF830006BE61 /* ListPeoplePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292471DF2D5890006BE61 /* ListPeoplePresenterTests.swift */; };
 		AB7292661DF6CF830006BE61 /* ListPeopleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7292481DF2D5890006BE61 /* ListPeopleViewControllerTests.swift */; };
+		AB72926A1DF99A4A0006BE61 /* README.MD in Sources */ = {isa = PBXBuildFile; fileRef = AB7292681DF99A4A0006BE61 /* README.MD */; };
+		AB72926C1DF99A6B0006BE61 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = AB72926B1DF99A6B0006BE61 /* LICENCE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		AB72924D1DF2D5AD0006BE61 /* EditPersonInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonInteractorTests.swift; sourceTree = "<group>"; };
 		AB72924E1DF2D5AD0006BE61 /* EditPersonPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonPresenterTests.swift; sourceTree = "<group>"; };
 		AB72924F1DF2D5AD0006BE61 /* EditPersonViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonViewControllerTests.swift; sourceTree = "<group>"; };
+		AB7292681DF99A4A0006BE61 /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		AB72926B1DF99A6B0006BE61 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		B15929DD98AF632F5D479D99 /* Pods_MyLife2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLife2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F47F889316068A032DF5AD /* Pods-MyLife2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLife2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLife2/Pods-MyLife2.release.xcconfig"; sourceTree = "<group>"; };
 		D67C1A196ECEFB8F9663A044 /* Pods-MyLife2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLife2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLife2Tests/Pods-MyLife2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 		AB7291F01DF176BD0006BE61 = {
 			isa = PBXGroup;
 			children = (
+				AB7292681DF99A4A0006BE61 /* README.MD */,
+				AB72926B1DF99A6B0006BE61 /* LICENCE */,
 				AB7291FB1DF176BD0006BE61 /* MyLife2 */,
 				AB7292101DF176BD0006BE61 /* MyLife2Tests */,
 				AB7291FA1DF176BD0006BE61 /* Products */,
@@ -316,6 +322,7 @@
 			files = (
 				AB72921F1DF1826E0006BE61 /* Main.storyboard in Resources */,
 				AB7292071DF176BD0006BE61 /* LaunchScreen.storyboard in Resources */,
+				AB72926C1DF99A6B0006BE61 /* LICENCE in Resources */,
 				AB7292041DF176BD0006BE61 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +440,7 @@
 				AB72922E1DF185B70006BE61 /* ListPeopleInteractor.swift in Sources */,
 				AB7292431DF187F90006BE61 /* PersonDatabase.swift in Sources */,
 				AB72922F1DF185B70006BE61 /* ListPeoplePresenter.swift in Sources */,
+				AB72926A1DF99A4A0006BE61 /* README.MD in Sources */,
 				AB72922D1DF185B70006BE61 /* ListPeopleConfigurator.swift in Sources */,
 				AB72923B1DF185EB0006BE61 /* EditPersonPresenter.swift in Sources */,
 				AB7291FD1DF176BD0006BE61 /* AppDelegate.swift in Sources */,
